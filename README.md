@@ -1,35 +1,34 @@
-# Typora-To-Wiki-Path-Converter
-A Python script to automate the customization of relative image paths in Markdown documents for seamless integration with Typora and Wiki.js.
+# Typora to Wiki.js Image Path Converter V2
+The Typora-To-Wiki-Path-Converter V2 is an enhanced Python script designed to bridge the gap between Typora, a popular Markdown editor, and Wiki.js, a powerful open-source wiki software. Unlike the first version, which only prepended a forward slash to relative image paths, this version allows for the inclusion of a complete path prefix, accommodating Wiki.js's requirement for full path specifications from the root for image embedding.
 
-Wiki.js requires image paths in Markdown files to start with a forward slash (/) to display images correctly. However, Typora, a popular Markdown editor, displays images only when their paths start with ./ or no slash at all. This discrepancy can cause issues when Markdown documents created or edited in Typora are uploaded to a Wiki.js platform.
-
-The Typora-To-Wiki-Path-Converter script elegantly solves this problem by adding a forward slash to the beginning of all relative image paths in a Markdown document, ensuring compatibility with Wiki.js without sacrificing the local usability in Typora. After running the script, users can temporarily review and copy the adjusted Markdown content before uploading it to their Wiki.js site. The script generates a temporary edited version of the document, which is automatically deleted upon closing the script, ensuring that the original document remains unchanged.
-
-## Features
-- Automated Path Adjustment: Automatically prepends a forward slash to relative image paths in Markdown files.
-- GUI for Easy Interaction: Provides a simple graphical user interface to select a Markdown file and view the adjusted content.
-- Temporary File Handling: Creates a temporary file with the adjusted paths for review and copying, then deletes it after use to keep your workspace clean.
-- Clipboard Support: Includes a "Copy All" button to easily copy the adjusted Markdown content to the clipboard for immediate use.
-- User-friendly Design: Designed with ease of use in mind, requiring no command-line interaction.
+## Key Features
+- Full Path Adjustment: Dynamically prepends user-specified path prefixes to all relative image paths, ensuring images display correctly in Wiki.js.
+- Graphical User Interface (GUI): Simplifies file selection and path prefix input through a user-friendly GUI, eliminating the need for command-line interaction.
+- Clipboard Functionality: Facilitates easy copying of the adjusted Markdown content to the clipboard for immediate use in Wiki.js.
+- Temporary File Management: Generates a temporary file for review, allowing users to copy the adjusted content. This file is automatically deleted upon script closure, keeping the original document intact.
+- Ease of Use: Tailored for simplicity, requiring minimal user input and no prior command-line experience.
 
 ## How It Works
-1. Start Screen: Upon launching the script, a start screen displays information about the tool and its creator.
-2. Select Markdown File: Users are prompted to choose a Markdown file for path adjustment.
-3. View and Copy Adjusted Content: The script displays the adjusted Markdown content, allowing users to copy it to the clipboard.
-4. Cleanup: After copying the content or closing the script, the temporary file is automatically deleted.
+- Initial Setup: The user is prompted to input the full path prefix where images will be hosted in Wiki.js (e.g., /intern/dokumentationsrichtlinien/typora-einrichtung/assets/).
+- Markdown File Selection: Through the GUI, users select the Markdown document needing path adjustments.
+- Content Adjustment and Review: The script processes the document, appending the specified path prefix to each relative image path. Users can then review and copy the modified content.
+- Final Steps: After copying the adjusted Markdown, the temporary file is deleted, ensuring no residual clutter.
 
 ## Requirements
 Python 3.6 or higher
+Installation
+To get started, clone this repository or download the .py file directly:
 
-## Installation
-Clone this repository or download the .py file directly.
-
-```
+```Copy code
 git clone https://github.com/realrichter/Typora-To-Wiki-Path-Converter.git
 ```
 
 ## Usage
-After cloning or downloading, run the script. A graphical interface will guide you through selecting a Markdown file and copying the adjusted content.
+Run the script to launch the GUI, follow the on-screen prompts to input the path prefix and select your Markdown file. The adjusted content will be displayed for copying to your Wiki.js site:
+- Input the complete path prefix for the images as per your Wiki.js structure.
+- Select the Markdown file you wish to adjust.
+- Copy the adjusted content and paste it into your Wiki.js page.
+- Ensure images are uploaded to the corresponding directory in Wiki.js.
 
-For any inquiries, contact the creator at rr@com-con.net.
+For assistance or inquiries, please reach out to the creator at rr@com-con.net.
 

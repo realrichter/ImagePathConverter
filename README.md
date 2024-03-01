@@ -18,7 +18,7 @@ The Typora to Wiki.js Image Path Converter is a user-friendly tool designed to f
 ## Installation
 No installation is required. If you're a Windows user, simply download the executable [here](https://github.com/realrichter/TyporaImagePaths/releases) and run it by double-clicking. You can also download the original Python script and run it either by double-clicking or with the following terminal command:
 
-`python typora_to_wiki_image_path_converter_v3.0.py`
+`python typora_to_wiki_image_path_converter.py`
 
 In order to run the python script, ensure you have Python 3.6 or newer installed on your system.
 

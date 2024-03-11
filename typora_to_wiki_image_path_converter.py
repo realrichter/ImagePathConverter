@@ -1,17 +1,18 @@
 """
-Typora to Wiki.js Path Converter
+Typora to Wiki.js Image Path Converter
 
 This program automates the process of adjusting image paths in Markdown files 
 created with Typora for compatibility with Wiki.js. It features a graphical 
-user interface (GUI) that guides the user through the process of specifying 
-a base path for images and selecting a Markdown file for conversion. The script 
-then dynamically updates all relative image paths within the document, ensuring 
-they are correctly displayed when uploaded to Wiki.js.
+user interface (GUI) that enables the user to specify a base path 
+for images and to select a Markdown file for conversion. The script 
+then dynamically updates all relative image paths within the document by prepending the
+specified base path, ensuring that images are correctly displayed when uploaded to Wiki.js.
 
 Features:
 - Graphical User Interface for ease of use.
 - Ability to specify a custom base path for image assets.
-- Automatic adjustment of relative image paths (now also for html-embedded images) in Markdown files.
+- Detection of images in the form ![alt text](path/to/image/) and since v4.0.0 also <img src="path/to/image/" alt="alt text" />.
+- Automatic adjustment of relative image paths in Markdown files.
 - Option to review and copy the adjusted content to the clipboard.
 
 Dependencies:
@@ -19,7 +20,7 @@ Dependencies:
 - customtkinter (an enhanced version of tkinter for a modern and customizable UI)
 
 Author: Raffael Richter
-Date: 08.03.2024
+Date: 11.03.2024
 Version: 4.0.0
 """
 
@@ -27,7 +28,6 @@ import customtkinter as ctk
 from tkinter import filedialog, messagebox, scrolledtext
 import re
 import os
-
 
 class PathConverterApp:
     def __init__(self, root):
